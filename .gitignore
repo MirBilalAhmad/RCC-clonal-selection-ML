@@ -1,0 +1,10 @@
+# Ignore local datasets
+data/*.csv
+data/*.xlsx
+data/*.xls
+data/*.json
+data/*.zip
+
+# Ignore all files inside data/
+# Uncomment this if no dataset should ever be uploaded
+# data/*
