@@ -1,0 +1,41 @@
+# Python environment for reproducing all analyses in:
+# "Tumor-Level Genomic Instability and Metastatic Clonal Selection in Renal Cell
+#  Carcinoma: An Interpretable Machine-Learning Analysis of Multi-Region
+#  Sequencing Data"
+#
+# Python version: 3.12 (as stated in the manuscript's Software subsection)
+#
+# Core packages below are pinned to the exact versions verified during the
+# original analysis (scikit-learn, shap, ete3). Supporting packages (pandas,
+# scipy, numpy, matplotlib, seaborn, statsmodels) are listed with the versions
+# used during development; if you encounter any version-sensitivity issues,
+# run `pip freeze > requirements-lock.txt` in a fresh environment after
+# installation to capture a fully resolved, bit-exact dependency set for your
+# platform.
+#
+# Install with:
+#   pip install -r requirements.txt
+#   # on externally-managed systems (e.g. recent Ubuntu/Debian):
+#   pip install -r requirements.txt --break-system-packages
+
+# --- Core analysis packages (exact versions verified at analysis time) ---
+scikit-learn==1.8.0
+shap==0.52.0
+ete3==3.1.3
+
+# --- Supporting scientific-Python stack ---
+pandas>=2.2
+numpy>=1.26
+scipy>=1.12
+statsmodels>=0.14
+matplotlib>=3.8
+seaborn>=0.13
+
+# --- Spreadsheet / document I/O (dataset construction, supplementary tables) ---
+openpyxl>=3.1
+
+# --- Notebook execution (for re-running / re-exporting the .ipynb files) ---
+jupyter>=1.0
+nbconvert>=7.0
+nbformat>=5.9
+ipykernel>=6.29
